@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100vh;
+    /* width: 98vw; */
+    background: moccasin;
+    display: grid;
+    grid-template-rows: minmax(0, 7fr) 81fr 12fr;
+    grid-template-columns: minmax(0, 9.5fr) 81fr minmax(0, 9.5fr);
+    grid-template-areas: ". . ."
+                         ". screen ."
+                         ". buttons .";
+
+}
+.screen{
+    grid-area: screen;
+    overflow: hidden;
+}
+.img0{
+    background: url(./images/goku\ \(3\).jpg);
+}
+.img1{
+    background: url(./images/goku\ \(4\).jpg);
+}
+.img2{
+    background: url(./images/goku\ \(5\).jpg);
+}
+.img3{
+    background: url(./images/goku\ \(6\).jpg);
+}
+.img4{
+    background: url(./images/goku\ \(7\).jpg);
+}
+
+.img-style{
+    height: 80.5%;
+    width: 81%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-size:  cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.toggleButtons{
+    grid-area: buttons;
+}
+.b{
+    text-align: center;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin: 0 10px;
+    height: 3rem;
+    width: 9rem;
+    border: 1px  solid black;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.b:hover{
+    background: rgb(134, 132, 132);
+    color: rgb(251, 241, 241);
+}
+.opacity{
+    transition: all 300ms ease-in-out;
+    animation: opacity 1s forwards 1;
+}
+@keyframes opacity{
+    from{
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0px);
+
+    }
+}
+
+/* EXCESS */
+/* .rb{
+    transform: translateX(-100%); 
+    animation: rb 1s forwards 1;
+}
+@keyframes rb{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+
+    }
+} */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+.container2{
+    border-top: 1px solid black;
+    height: 100vh;
+    /* width: 98vw; */
+    background: moccasin;
+    display: grid;
+    grid-template-rows: minmax(0, 7fr) 81fr 12fr;
+    grid-template-columns: minmax(0, 8fr) 84fr minmax(0, 8fr);
+    grid-template-areas: "h1 h1 h1"
+                         ". screen2 ."
+                         ". buttons .";
+}
+.container2 h1{
+    grid-area: h1;
+    text-align: center;
+    word-spacing: 2rem;
+    letter-spacing: 1rem;
+}
+.screen2{
+    grid-area: screen2;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* display: grid; */
+    /* grid-auto-flow: column; */
+    overflow: hidden;
+}
+.img20{
+    background: url(./images2/goku\ \(3\).jpg);
+    /* display: none; */
+}
+.img21{
+    background: url(./images2/goku\ \(4\).jpg);
+    /* display: none; */
+}
+.img22{
+    background: url(./images2/goku\ \(5\).jpg);
+    /* display: none; */
+}
+.img23{
+    background: url(./images2/goku\ \(6\).jpg);
+    /* display: none; */
+}
+.img24{
+    background: url(./images2/goku\ \(7\).jpg);
+    /* display: none; */
+}
+
+.img-style2{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* transform: translate(-100%, -100%); */
+}
+.toggleButtons2{
+    grid-area: buttons;
+}
+.b2{
+    text-align: center;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin: 0 10px;
+    height: 3rem;
+    width: 9rem;
+    border: 1px  solid black;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.b2:hover{
+    background: rgb(134, 132, 132);
+    color: rgb(251, 241, 241);
+}
+/* .translateRight{
+    transform: translateX(100%);
+    transition: all 300ms ease;
+    animation: translateRight 300ms forwards 1;
+    transition: all 300ms ease;
+
+} */
+/* .translateLeft{
+    transition: all 300ms ease;
+    animation: translateLeft 2s forwards 1;
+} */
+.translateTop{
+    animation: translateTop 1s forwards 1;    
+    transition: all 300ms eas;
+}
+
+@keyframes translateTop{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/* @keyframes translateBottom{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+} */
+/*back up */
+/* .translateTop{
+    animation: translateTop 1s forwards 1;    
+    transition: all 300ms eas;
+}
+.translateBottom{
+    animation: translateTop 1s forwards 1;    
+}*/
+/* ------------------------------------------------------- */
+/* @keyframes translateLeft{
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+} */
+
+@keyframes translateRight{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
